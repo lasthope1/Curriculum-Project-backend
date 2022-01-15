@@ -1,4 +1,5 @@
 import { catNode }  from "../util/catNode";
+import { course } from "../util/course";
 import { filters } from "../util/filters";
 import { leafNode } from "../util/leafNode";
 
@@ -15,7 +16,7 @@ import { leafNode } from "../util/leafNode";
 // }
 
 const resolvers = {
-    name : () : string  => 'Anon Rottua',
+    name : (): string  => 'Anon Rottua',
     
     gpa() { return 2.39 },
     
@@ -29,28 +30,20 @@ const resolvers = {
         if(!node){
             throw new Error(`CatNode with id ${id} dose not exist.`);
         }
-        // if(id != null){
-        //     node = catNode.find((Node) => Node.id === id);
-        //     if(!node){
-        //         throw new Error(`CatNode with id ${id} dose not exist.`);
-        //     }
-        // }else {
-        //     node = catNode; 
-        // }
-        console.log(`\nThe selected ID is ${id} .`);
-        console.log(node);
         return node;
     },
 
     filter(_,{id}){
         const Fil = filters.find((nodeFil) => nodeFil.id === id);
-        console.log(Fil.id);
         return Fil;
     },
 
     leafNode(){
-        console.log(leafNode);
         return leafNode;
+    },
+
+    course(){
+        return course;
     }
 }
 

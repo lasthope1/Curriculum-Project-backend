@@ -1,7 +1,8 @@
 
 import { catNode }  from "../util/catNode";
 import { filters } from "../util/filters";
-import { leafNode } from "../util/leafNode";
+import { course } from "../util/course";
+const { leafNode } = require("../util/leafNode"); // it's the same --import {leafNode} from "../util/leafNode"--
 
 const resolvers = {
     /* ----- Query ----- */
@@ -19,19 +20,20 @@ const resolvers = {
             if(!node){
                 throw new Error(`CatNode with id ${id} dose not exist.`);
             }
-            console.log(`\nThe selected ID is ${id} .`);
-            console.log(node);
             return node;
         },
 
         filter(_,{id}){
-            const Fil = filters.find((nodeFil) => nodeFil.id === id);
-            console.log(Fil.id);
+            const Fil = filters.find((nodeFil) => nodeFil.id === id);           
             return Fil;
         },
 
         leafNode(){
             return leafNode;
+        },
+
+        course(){
+            return course
         }
     },
 

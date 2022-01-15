@@ -44,6 +44,7 @@ export const typeDefs = gql`
 	        catNode (id: ID): CatNode!
 	        filter (id: ID): Filters!
 			leafNode: [LeafNode!]!
+			course: [Course!]!
 	    }
 
 	

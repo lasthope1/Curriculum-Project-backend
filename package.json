@@ -12,9 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "apollo-server-express": "^3.5.0",
-    "express": "^4.17.1",
+    "express": "^4.17.2",
     "graphql": "^15.8.0",
-    "ts-node": "^10.4.0",
     "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.4.0"
   }
 }
