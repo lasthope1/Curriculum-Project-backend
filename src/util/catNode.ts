@@ -1,44 +1,26 @@
 export const catNode = [
     {
-        id : '1',
+        id : 'Cat1',
 		name : 'General Education',
 		filters : [],
 		credits : 30,
 		keepOverCredits : false,
-		refs : [
-            {
-                id : '10',
-                name : 'Language',
-                filters: ['F1'],
-                courses: [ '101', '201', '301']
-            },
-            {
-                id : '20',
-                name : 'Learning though activity',
-                filters: [],
-                courses: [ '191', '192']
-            }
-        ]
+		refs : ['CL_10', 'CL_20', 'CL_30', 'CL_40']
     },
     {
-        id : '2',
+        id: 'Cat2',
+        name: 'Field of specialization',
+        filters: [],
+        credits: 90,
+        keepOvercredits: false,
+        refs: ['CL_CC', 'Cat_Maj']
+    },
+    {
+        id : 'Cat3',
         name : 'Free Elective',
         filters : [],
         credits : 30,
         keepOvercredits : false,
-        refs : [
-            {
-                id : '30',
-                name : 'Human and Social',
-                filters: [],
-                courses: [ '101', '201', '301']
-            },
-            {
-                id : '40',
-                name : 'Sci and Math',
-                filters: [],
-                courses: [ '191', '192']
-            }
-        ]
+        refs : []
     }
 ]

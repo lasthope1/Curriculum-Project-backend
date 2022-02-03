@@ -8,7 +8,7 @@ const { resolvers } = require('./Schema/resolvers');
 
 
 const option = {
-    port : 4000,
+    port: 4000,
     endpoint: '/graphql'
 }
 

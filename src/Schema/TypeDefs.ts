@@ -8,10 +8,10 @@ export const typeDefs = gql`
 			filters: [ Filters ]!
 			credits: Int!
 			keepOverCredits: Boolean!
-			refs: [LeafNode]!  
+			refs: [ID]!  
 		}
 
-	type LeafNode {
+	type CourseListNode {
 			id: ID!
 			name: String!
 			filters: [ Filters ]!
@@ -21,7 +21,9 @@ export const typeDefs = gql`
 	type Course {
 			id: ID!
 			name: String!
-			course_number: String! 
+			course_number: String!
+			credit: Int!
+			grade: String 
 		}
 
 	type Filters {
@@ -41,16 +43,16 @@ export const typeDefs = gql`
 	        name: String!
 	        gpa: Float!
 	        isGraduation: Boolean!
-	        catNode (id: ID): CatNode!
+	        catNode: [CatNode!]!
 	        filter (id: ID): Filters!
-			leafNode: [LeafNode!]!
+			courseListNode: [CourseListNode!]!
 			course: [Course!]!
 	    }
 
 	
 	# Mutation
 	type Mutation {
-	        updateLeafNode ( id: ID!, name: String! ): LeafNode!
+	        updateLeafNode ( id: ID!, name: String! ): CourseListNode!
 	    }
 
 `;

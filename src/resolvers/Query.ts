@@ -1,7 +1,7 @@
 import { catNode }  from "../util/catNode";
 import { course } from "../util/course";
 import { filters } from "../util/filters";
-import { leafNode } from "../util/leafNode";
+import { courseListNode } from "../util/courseList";
 
 // interface Args {
 //     id : any ;
@@ -39,7 +39,7 @@ const resolvers = {
     },
 
     leafNode(){
-        return leafNode;
+        return courseListNode;
     },
 
     course(){
