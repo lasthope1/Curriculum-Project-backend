@@ -2,7 +2,7 @@
 import { catNode }  from "../util/catNode";
 import { filters } from "../util/filters";
 import { course } from "../util/course";
-const { courseListNode } = require("../util/leafNode"); // it's the same --import {leafNode} from "../util/leafNode"--
+const { courseListNode } = require("../util/courseList"); // it's the same --import {leafNode} from "../util/leafNode"--
 
 const resolvers = {
     /* ----- Query ----- */

@@ -18,7 +18,7 @@ export const course = [
         name: "English 3",
         course_number: "001301",
         credit: 3,
-        grade: 'B'
+        grade: 'Processing'
     },
     {
         id: '401',
